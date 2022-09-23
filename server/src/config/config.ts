@@ -1,4 +1,4 @@
-let mongoURI = require('./mongoURI.json');
+import envProps from "./envProps";
 
 
 const config = {
@@ -10,7 +10,7 @@ const config = {
             autoIndex: false,
             retryWrites: false
         },
-        url: mongoURI.mongo_uri
+        url: envProps.MONGO_URI
     },
     server: {
         host:"localhost",
